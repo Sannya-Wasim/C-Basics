@@ -1,0 +1,315 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main() 
+{
+  int a, b, z;
+  cout<<"Enter the first operand : "<<endl;
+  cin>>a;
+  cout<<"Enter the second operand : "<<endl;
+  cin>>b;
+  z=a+b;
+  cout<<"The result is : "<<z<<endl;
+  _getch();
+  return 0;
+}
+
+/*int main()
+{
+    int i=10;
+    cout<<++i;
+    cout<<++i;
+    cout<<i++;
+    cout<<++i;
+}*/
+
+/*int main()          // incrementing using for loop
+{
+    cout<<"i\ti*i\ti*i*i"<<endl;
+    for (int i;i<=10;i++)
+    {
+     cout<<i<<"\t"<<i*i<<"\t"<<i*i*i<<endl;
+	}
+}
+*/
+
+/*int main()      //decrementing using for loop
+{
+    cout<<"i\ti*i\ti*i*i"<<endl;
+    for(int i;i>=1;i--)
+    {
+     cout<<i<<"\t"<<i*i<<"\t"<<i*i*i<<endl;
+	}
+}*/
+
+/*int main()      //incrementing using while loop
+{
+    int i;
+    cout<<"i\ti*i\ti*i*i"<<endl;
+    while i<=10;
+    cout<<i<<"\t"<<i*i<<"\t"<<i*i*i<<endl;
+    i++;
+}*/
+
+/*int main()            //factorial using for loop
+{
+    int fact;
+    cout<<"Enter the number you want to find the factorialof : "<<endl;
+    cin>>fact;
+    for (int i;i<=10;i++)
+    {
+     fact=fact*i
+	}
+    cout<<"The factorial of the number is :"<<fact<<endl;
+    _getch();
+    return 0;
+}*/
+
+/*int main()          //factorial using while loop
+{
+    int n, fact=1;
+    cout<<"Enter the number you want the find the factorial of : "<<endl;
+    cin>>n;
+    while(n<=10);
+    {
+        fact=fact*n;
+    }
+    n++;
+    cout<<"The factorial of the number is : "<<fact<<endl;
+    _getch();
+    return 0
+}*/
+
+/*int main()      //odd and even numbers using if/else
+{
+    int n;
+    int ecount=0;
+    int ocount=0;
+    while(n<=20)
+    {
+     if(n%2==0)
+     {
+      ecount++;
+	 }
+     else
+     {
+      ocount++;
+	 }
+	}
+    n++;
+    cout<<"The number of even numbers are : "<<ecount<<endl;
+    cout<<"The number of odd numbers are :  "<<ocount<<endl;
+    _getch();
+    return 0;
+}*/
+
+/*int main()      //identify if user input is a vowel or consonant
+{
+    char ch;
+    cout<<"Enter a character : "<<endl;
+    cin>>ch;
+    if (ch=="a"|| ch="e" || ch="i" ||ch="o" ||ch="u")
+    {
+     cout<<"The character is a vowel!"<<endl;
+	}
+    else
+    {
+     cout<<"The character is a consonant!"
+    }
+    _getch();
+    return 0;
+}*/
+# include <string>       // strings
+/*int main()     //string concatenation    
+{
+    string firstName="Kim"
+    string lastName=" Namjoon"
+    string fullname=firstname+lastName
+    cout<<fullname;
+}*/
+
+/*APPEND
+A string in C++ is actually an object, which contain functions that can perform certain operations on strings.
+For example, you can also concatenate strings with the append() function:*/
+
+/*int main()
+{
+    string firatName="Kim"
+    string lastName=" Seokjin"
+    string fullName=firstName.append(lastName)
+    cout<<fullName<<endl;
+    _getch();
+    return 0;
+}*/
+
+/*int main()      //concatenation of string and numbers
+{
+    string a="10";
+    string b="20";
+    z=a+b
+    cout<<z<<endl;
+    _getch();
+    return 0;
+}*/
+
+/*To get the length of a string, use the length() function: 
+You might see some C++ programs that use the size() function to get the length of a string. 
+This is just an alias of length(). It is completely up to you if you want to use length() or size():*/
+
+/*int main()
+{
+    string txt="Kim Nmajoon Kim Seokjin Min yoongi Jeong Hoseok Park Jimin Kim Taehyun Jeon Jungkook BTS"
+    cout<<"The lenghtof the string is : "<<txt.length()<<endl;
+    _getch();
+    return 0;
+}*/
+
+/*ACCESS STRINGS 
+You can access the characters in a string by referring to its index number inside square brackets [].
+To change the value of a specific character in a string, refer to the index number, and use single quotes:*/
+
+/*int main()
+{
+    string random="Jay Park"
+    cout<<random[0]<<endl;
+    random[0]='K'
+    cout<<random<<endl;
+    _gethc();
+    retun 0;
+}*/
+
+//Question: Count the number of vowels and consonants in the user given string
+
+/*USER INPUT STRINGS 
+It is possible to use the extraction operator >> on cin to display a string entered by a user:
+However, cin considers a space (whitespace, tabs, etc) as a terminating character, which means that it can only display a 
+single word (even if you type many words):*/
+
+/*int main()
+{
+    string fullName;
+    cout<<"Enter your Full Name : "<<endl;
+    cin>>fullName;
+    cout << "Your name is: " << fullName;
+    // Enter your full name: Kang Daniel
+    // Your name is: Kang
+    _getch();
+    return 0;
+}*/
+
+/*From the example above, you would expect the program to print "Kang Daniel", but it only prints "Kang".
+That's why, when working with strings, we often use the getline() function to read a line of text. It takes cin as the first parameter, and 
+the string variable as second:*/
+
+/*int main()
+{
+    string fullName;
+    cout<<"Enter your Full Name : "<<endl:
+    getline (cin,fullName);
+    cout<<"your Full Name is : "<<fullName<<endl;
+    _getch();
+    return 0;
+}*/
+
+/*SWITCH
+Use the switch statement to select one of many code blocks to be executed.(https://www.w3schools.com/cpp/cpp_switch.asp)
+This is how it works:
+
+The switch expression is evaluated once
+The value of the expression is compared with the values of each case
+If there is a match, the associated block of code is executed.
+When C++ reaches a break keyword, it breaks out of the switch block.
+
+This will stop the execution of more code and case testing inside the block.
+When a match is found, and the job is done, it's time for a break. There is no need for more testing.
+A break can save a lot of execution time because it "ignores" the execution of all the rest of the code in the switch block.
+
+The default keyword specifies some code to run if there is no case match:
+The default keyword must be used as the last statement in the switch, and it does not need a break.*/
+
+/*int main()      //simple calculator
+{   
+    char ch;
+    int num1,num2;
+    cout<<"Enter the operand : "<<endl;
+    cin>>oper;
+    cout<<"Enter the two numbers : "<<endl;
+    cin>>num1>>num2;
+    switch (operand)
+    {
+    case '+':
+    cout<<num1<<"+"<<num2<<"="<<num1+num2;
+    break;
+
+    case'-':
+    cout<<num1<<'-'<<num2<<'='<<num1-num2<<endl;
+    break;
+
+    case '*':
+    cout<<num1<<'*'<<num2<<'='<<num1*num2<<endl;
+    break;
+
+    case '/':
+    cout<<num1<<'/'<<num2<<'='<<num1/num2;
+    break;
+
+    default:
+    cout<<"Error! Incorrect Operand"<<endl;
+    break
+	}
+     _getch();
+    return 0;
+}*/
+
+/*ARRAYS
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+To declare an array, define the variable type, specify the name of the array followed by square brackets and 
+specify the number of elements it should store:*/
+
+/*int main()
+{
+    string BTS[7]={"Kim Namjoon","Kim Seokjin","Min Yoongi","Jeong Hoseok","Park Jimin","Kim Taehyung","Hyunjin"}   //initialization
+    cout<<BTS[4]<<endl;
+    BTS[6]="Jeon Jungkook"
+    cout<<BTS<<endl;
+    for (int i; i<7;i++)        //for loop through an array
+    {
+        cout<<i<<":"<<BTS[i]<<"\n";
+	}
+    _getch();
+    return 0;
+}*/
+
+/*REFERENCES
+A reference variable is a "reference" to an existing variable, and it is created with the & operator:*/
+
+/*int main()
+{
+    string actor="Gong Yoo"
+    string &crush=actor
+    cout<<"Actor"<<actor<<endl;
+    cout<<"Celebrity Crush"<<crush<<endl;
+    _getch();
+    return 0;
+}*/
+
+/*Memory Address
+In the example from the previous page, the & operator was used to create a reference variable. 
+But it can also be used to get the memory address of a variable; which is the location of where the variable is 
+stored on the computer.
+
+When a variable is created in C++, a memory address is assigned to the variable. And when we assign a value to the variable,
+it is stored in this memory address.
+
+To access it, use the & operator, and the result will represent where the variable is stored:*/
+
+/*int main()
+{
+    string singer="Jay Park"
+    cout<<&singer<<endl;
+    _getch();
+    return 0;
+}*/
+
+/*POINTERS
