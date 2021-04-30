@@ -1,8 +1,8 @@
-#include <iostream>
-#include <conio.h>
+#include<iostream>
+#include<conio.h>
 using namespace std;
 
-int main() 
+/*int main() 
 {
   int a, b, z;
   cout<<"Enter the first operand : "<<endl;
@@ -13,53 +13,59 @@ int main()
   cout<<"The result is : "<<z<<endl;
   _getch();
   return 0;
-}
+}*/
 
 /*int main()
 {
     int i=10;
-    cout<<++i;
-    cout<<++i;
-    cout<<i++;
-    cout<<++i;
+    cout<<++i<<endl;
+    cout<<++i<<endl;
+    cout<<i++<<endl;
+    cout<<++i<<endl;
 }*/
 
 /*int main()          // incrementing using for loop
 {
     cout<<"i\ti*i\ti*i*i"<<endl;
-    for (int i;i<=10;i++)
+    for (int i=1;i<=10;i++)
     {
      cout<<i<<"\t"<<i*i<<"\t"<<i*i*i<<endl;
 	}
-}
-*/
+}*/
+
 
 /*int main()      //decrementing using for loop
 {
     cout<<"i\ti*i\ti*i*i"<<endl;
-    for(int i;i>=1;i--)
+    for(int i=10;i>=1;i--)
     {
      cout<<i<<"\t"<<i*i<<"\t"<<i*i*i<<endl;
 	}
+    _getch();
+    return 0;
 }*/
 
 /*int main()      //incrementing using while loop
 {
-    int i;
+    int i=1;
     cout<<"i\ti*i\ti*i*i"<<endl;
-    while i<=10;
-    cout<<i<<"\t"<<i*i<<"\t"<<i*i*i<<endl;
-    i++;
+    while (i<=10)
+    {
+        cout<<i<<"\t"<<i*i<<"\t"<<i*i*i<<endl;
+        i++;
+    }
+_getch();
+return 0;
 }*/
 
 /*int main()            //factorial using for loop
 {
-    int fact;
+    int fact=1,n;
     cout<<"Enter the number you want to find the factorialof : "<<endl;
-    cin>>fact;
-    for (int i;i<=10;i++)
+    cin>>n;
+    for (int i=1;i<=n;i++)
     {
-     fact=fact*i
+     fact=fact*i;
 	}
     cout<<"The factorial of the number is :"<<fact<<endl;
     _getch();
@@ -90,14 +96,13 @@ int main()
     {
      if(n%2==0)
      {
-      ecount++;
+      ecount=ecount+1;
 	 }
      else
      {
-      ocount++;
+      ocount=ocount+1;
 	 }
-	}
-    n++;
+	n++;}
     cout<<"The number of even numbers are : "<<ecount<<endl;
     cout<<"The number of odd numbers are :  "<<ocount<<endl;
     _getch();
@@ -109,23 +114,24 @@ int main()
     char ch;
     cout<<"Enter a character : "<<endl;
     cin>>ch;
-    if (ch=="a"|| ch="e" || ch="i" ||ch="o" ||ch="u")
+    if (ch=='a'|| ch=='e' || ch=='i' ||ch=='o' ||ch=='o')
     {
      cout<<"The character is a vowel!"<<endl;
 	}
     else
     {
-     cout<<"The character is a consonant!"
+     cout<<"The character is a consonant!"<<endl;
     }
     _getch();
     return 0;
 }*/
-# include <string>       // strings
+
+#include <string>       // strings
 /*int main()     //string concatenation    
 {
-    string firstName="Kim"
-    string lastName=" Namjoon"
-    string fullname=firstname+lastName
+    string firstName="Kim";
+    string lastName=" Namjoon";
+    string fullname=firstName+lastName;
     cout<<fullname;
 }*/
 
@@ -145,9 +151,10 @@ For example, you can also concatenate strings with the append() function:*/
 
 /*int main()      //concatenation of string and numbers
 {
+    string z;
     string a="10";
     string b="20";
-    z=a+b
+    z=a+b;
     cout<<z<<endl;
     _getch();
     return 0;
@@ -159,8 +166,8 @@ This is just an alias of length(). It is completely up to you if you want to use
 
 /*int main()
 {
-    string txt="Kim Nmajoon Kim Seokjin Min yoongi Jeong Hoseok Park Jimin Kim Taehyun Jeon Jungkook BTS"
-    cout<<"The lenghtof the string is : "<<txt.length()<<endl;
+    string txt="Kim Nmajoon Kim Seokjin Min yoongi Jeong Hoseok Park Jimin Kim Taehyun Jeon Jungkook BTS";
+    cout<<"The length of the string is : "<<txt.length()<<endl;
     _getch();
     return 0;
 }*/
@@ -171,12 +178,12 @@ To change the value of a specific character in a string, refer to the index numb
 
 /*int main()
 {
-    string random="Jay Park"
+    string random="Jay Park";
     cout<<random[0]<<endl;
-    random[0]='K'
+    random[0]='K';
     cout<<random<<endl;
-    _gethc();
-    retun 0;
+    _getch();
+    return 0;
 }*/
 
 //Question: Count the number of vowels and consonants in the user given string
@@ -205,7 +212,7 @@ the string variable as second:*/
 /*int main()
 {
     string fullName;
-    cout<<"Enter your Full Name : "<<endl:
+    cout<<"Enter your Full Name : "<<endl;
     getline (cin,fullName);
     cout<<"your Full Name is : "<<fullName<<endl;
     _getch();
@@ -230,13 +237,13 @@ The default keyword must be used as the last statement in the switch, and it doe
 
 /*int main()      //simple calculator
 {   
-    char ch;
+    char oper;
     int num1,num2;
     cout<<"Enter the operand : "<<endl;
     cin>>oper;
     cout<<"Enter the two numbers : "<<endl;
     cin>>num1>>num2;
-    switch (operand)
+    switch (oper)
     {
     case '+':
     cout<<num1<<"+"<<num2<<"="<<num1+num2;
@@ -256,7 +263,6 @@ The default keyword must be used as the last statement in the switch, and it doe
 
     default:
     cout<<"Error! Incorrect Operand"<<endl;
-    break
 	}
      _getch();
     return 0;
@@ -269,9 +275,9 @@ specify the number of elements it should store:*/
 
 /*int main()
 {
-    string BTS[7]={"Kim Namjoon","Kim Seokjin","Min Yoongi","Jeong Hoseok","Park Jimin","Kim Taehyung","Hyunjin"}   //initialization
+    string BTS[7]={"Kim Namjoon","Kim Seokjin","Min Yoongi","Jeong Hoseok","Park Jimin","Kim Taehyung","Hyunjin"};   //initialization
     cout<<BTS[4]<<endl;
-    BTS[6]="Jeon Jungkook"
+    BTS[6]="Jeon Jungkook";
     cout<<BTS<<endl;
     for (int i; i<7;i++)        //for loop through an array
     {
@@ -286,8 +292,8 @@ A reference variable is a "reference" to an existing variable, and it is created
 
 /*int main()
 {
-    string actor="Gong Yoo"
-    string &crush=actor
+    string actor="Gong Yoo";
+    string &crush=actor;
     cout<<"Actor"<<actor<<endl;
     cout<<"Celebrity Crush"<<crush<<endl;
     _getch();
@@ -306,10 +312,201 @@ To access it, use the & operator, and the result will represent where the variab
 
 /*int main()
 {
-    string singer="Jay Park"
+    string singer="Jay Park";
     cout<<&singer<<endl;
     _getch();
     return 0;
 }*/
 
 /*POINTERS
+A pointer is a variable that stores the memory address as its value.
+A pointer variable points to a data type (like int or string) of the same type, and is created with the * operator.
+The address of the variable you're working with is assigned to the pointer:*/
+
+/*int main()
+{
+    string biakacrush="Kwak Yeon Dong",meracrush;
+    string* ptr;    //way to initialize a pointer
+    ptr=&biakacrush;    // A pointer variable, with the name ptr, that stores the address of biakecrush
+    cout<<"ptr  :   "<<ptr<<endl;   //ptr  :   0x7bfde0
+    cout<<"*ptr :   "<<*ptr<<endl;  //*ptr :   Kwak Yeon Dong        //use the pointer to get the value of the variable, by using the * operator (the dereference operator)
+    cout<<"bia ka crush :   "<<biakacrush<<endl;    //bia ka crush :   Kwak Yeon Dong
+    cout<<"&bia ka crush    :   "<<&biakacrush<<endl;       //&bia ka crush    :   0x7bfde0
+    *ptr="Hwang Hyunjin";    // Change the value of the pointer 
+    cout<<"Changed content of pointer   :   "<<*ptr<<endl;
+    cout<<"Changed address of pointer   :   "<<ptr<<endl;   //address doesnt change as it stilldirects to the old address of biakacrush
+    cout<<"Changed content of biakacrush    :   "<<*ptr<<endl;    //pointer can changed the content of the variable but not the address
+    biakacrush="Hwang Hyunjin";
+    ptr=&biakacrush;
+    cout<<"Changed content of pointer   :   "<<*ptr<<endl;
+    cout<<"Changed address of pointer   :   "<<ptr<<endl; 
+    _getch();   
+    return 0;
+}*/
+
+/*  1) Non Constant Pointer with Non Constant Data
+*Non Constant pointer can change the content of the variable but not the address of the variable
+Changing the content of either variable or pointer will never change the address. Here the Non Constant pointer and Non Constant variable
+means that the content of pointer can be changed but not the address.  */
+
+/*int main()
+
+{
+    int var=10;
+    int* ptr=&var;
+cout<<"Content of variable using variable   :   "<<var<<endl;
+cout<<"Address of variable using & operator :   "<<&var<<endl;
+cout<<"Content of variable using pointer    :   "<<*ptr<<endl;
+cout<<"Address of variable using pointer    :   "<<ptr<<endl;
+*ptr=11;
+cout<<"Changed content of variable using pointer    :   "<<var<<endl;
+cout<<"Changed address  :   "<<ptr<<endl;
+var=12;
+cout<<"Changed address  using pointer :   "<<ptr<<endl;
+cout<<"Changed address using variable   :   "<<&var<<endl;
+cout<<"Changed content of variable using variable  :   "<<var<<endl;
+_getch();
+return 0;
+}
+
+/*  2) Constant Pointer with Non Constant Variable
+A const pointer is a pointer whose value can not be changed after initialization
+To declare a const pointer, use the const keyword between the
+asterisk and the pointer name:
+
+A const pointer must be initialized to a value upon declaration. This means a const pointer
+will always point to the same address*/
+
+/*int main()
+{
+    int var1=10,var2=20;
+    int *const ptr=&var1;
+    cout<<"Content of pointer   :   "<<*ptr<<endl;
+    cout<<"Address of Pointer   :   "<<ptr<<endl;   //the const pointer is initialized to the address of value1
+    ptr=&var2;
+    cout<<"Changed content of pointer   :   "<<*ptr<<endl;
+    cout<<"Changed address of pointer     :   "<<ptr<<endl;   //once initialized, a const pointer can not be changed therefore it gives an error
+    _getch();
+    return 0;
+}*/
+
+/*  3)  Non Constant Pointer with Constant Variable
+To declare a pointer to a const value, use the const keyword before the data type:*/
+
+/*int main()
+{
+    const int var=5;
+    const int* ptr=&var;    //ptr is a non-const pointer that is pointing to a "const int"
+    *ptr=6;     //error, we can't change a const value
+    _getch();
+    return 0;
+}*/
+
+/*  4) Constant Pointer with Constant Variable
+It is possible to declare a const pointer to a const value by using the const keyword both before the type and before the variable name:*/
+
+/*int main()
+{
+    int var=15;
+    const int* const ptr=&var;
+    _getch();
+_   return 0;
+}*/
+
+/*  STRUCTURES      (https://www.geeksforgeeks.org/structures-in-cpp/)
+A structure is a user-defined data type in C/C++. 
+A structure creates a data type that can be used to group items of possibly different types into a single type.
+
+Structures in C++ are user defined data types which are used to store group of items of non-similar data types.*/
+
+# include <string>
+/*struct Mobile
+{
+    int model;
+    float price;
+    string company;
+
+};
+
+int main()
+{
+    Mobile m1;
+    cout<<"Enter  First Mobile's Model :   "<<endl;
+    cin>>m1.model;      // accessing structure elements
+    cout<<"Enter its price  :   "<<endl;
+    cin>>m1.price;
+    cout<<"Enter its Company    :   "<<endl;
+    cin>>m1.company;
+    Mobile m2={457,50000.00,"Samsung"};
+    cout<<"Second Mobile's Model    :   "<<m2.model<<endl;  //Second Mobile's Model    :   457
+    _getch();
+    return 0;
+}*/
+
+
+/*struct Measurements
+{
+    float feet;
+    float inches;
+};
+
+struct Room
+{
+    Measurements length;
+    Measurements width;
+};
+
+int main()
+{
+    Room classroom;
+    classroom.length.feet=12.0;
+    classroom.length.inches=48.0;
+
+    classroom.width.feet=9.0;
+    classroom.width.inches=36.0;
+
+    float area;
+    area=classroom.length.feet*classroom.width.feet;
+    cout<<"Area of classroom in feet square :   "<<area<<endl;
+    cout<<"Area of classroom in inches square   :   "<<area/144<<endl;
+    _getch();
+    return 0;
+}*/
+
+/*  MULTI-DIMENSIONAL ARRAYS
+    Two-Dimensional Arrays
+    To declare a two-dimensional integer array of size x,y, you would write something as follows 
+    
+    type arrayName [ x ][ y ];
+    
+    A two-dimensional array can be think as a table, which will have x number of rows and y number of columns.
+    every element in array a is identified by an element name of the form a[ i ][ j ], 
+    where a is the name of the array, and i and j are the subscripts that uniquely identify each element in a.
+    
+    Initializing Two-Dimensional Arrays
+    
+    int a[3][4]=       rows=3  columns=4
+    {                               // number of arrays=number of rows
+        {1,2,3,4}       initializers for row indexed by 0 
+        {5,6,7,8}       initializers for row indexed by 1 
+        {9,10,11,12}    initializers for row indexed by 2
+    };      
+    
+    Accessing Two-Dimensional Array Elements
+    An element in 2-dimensional array is accessed by using the subscripts, i.e., row index and column index of the array.
+    
+    int value=a[2][3]*/
+
+    /*int main()
+    {
+        int a[5][2]={ {0,0},  {1,2}, {3,4}, {5,6}, {7,8}};
+        for (int i=0;i<5;i++)
+        {
+            for (int j=0;j<2;j++)
+            {
+                cout<<"a["<<i<<"]["<<j<<"]  :   "<<a[i][j]<<endl;
+            }
+        }
+        _getch();
+        return 0;
+    }*/
