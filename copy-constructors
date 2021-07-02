@@ -1,0 +1,36 @@
+// copy construcctor
+//Program 1
+/*class car
+{
+    private:
+    string colour, model;
+    public:
+    car(string c, string m) : colour(c), model(m)   //constructor
+    {};
+    car(const car &x)       //copy constructor
+    {
+        colour=x.colour;
+        model=x.model;
+    }
+     string get_colour() { return colour;}
+     void set_colour(string a) {colour=a;}
+
+     string get_model() { return model;}
+     void set_model(string b) {model=b;}
+};
+
+int main()
+{
+    car c1("red", "honda");
+    car c2=c1;      //copy constructor is called here
+    //accessing values of both the objects
+    cout<<"Details of first car : "<<endl;
+    cout<<"Colour : "<<c1.get_colour();
+    cout<<"\nModel : "<<c1.get_model();
+    cout<<"/nDetails of second car : "<<endl;
+    cout<<"Colour : "<<c2.get_colour();
+    cout<<"\nModel : "<<c2.get_model();
+    cout<<endl;
+    _getch();
+    return 0;
+}*/
