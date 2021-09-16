@@ -1,0 +1,76 @@
+// login Form
+/*using System.Windows.Forms;
+using System.Data.OleDb;
+
+namespace Login_form
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==(char)13)
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==(char)13)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Please enter your Username.");
+                textBox1.Focus();
+                return;
+            }
+            try
+            {
+                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Ace.Oledb.12.0; Data Source=C:\Users\Wasim Yasin\Documents\Database5.accdb");
+                OleDbDataAdapter adap = new OleDbDataAdapter("SELECT * From Table1 ",conn);
+                DataTable d1 = new DataTable();
+                //MessageBox.Show("Connection has established");
+                adap.Fill(d1);
+                if (d1.Rows.Count>0)
+                {
+                    MessageBox.Show("You have been succcessfully logged in!");
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Username or Password");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+    }
+}*/
